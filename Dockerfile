@@ -1,3 +1,4 @@
+# Our Web Server Image :)
 FROM grafclouds/centos7-web-server
 
 # Other Required Files
