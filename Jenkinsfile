@@ -16,7 +16,7 @@ pipeline {
         stage('Build Dockerfile') {    
             agent { label 'slave' }      
             steps {                
-                    sh 'docker build -t grafclouds/$git_repo_name:latest .'
+                    sh 'docker build --no-cache -t grafclouds/$git_repo_name:latest .'
             }
         }
         stage('Push to DTR') {    
