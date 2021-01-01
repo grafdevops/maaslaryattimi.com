@@ -27,13 +27,5 @@ pipeline {
             }
         }
     }
-    post {
-        success {
-            slackSend channel: '#mydexpay', color: 'good', message: "$git_repo_name kodları sunucuya aktarıldı!  \n*JenkinsJob:* $BUILD_URL \n*GitHubUrl:* $GIT_URL \n*CommitBy:* $GIT_COMMITTER_NAME"
-        }
-        failure {
-            slackSend channel: '#mydexpay', color: 'danger', message: "$git_repo_name kodları sunucuya aktarılamadı!  \n*JenkinsJob:* $BUILD_URL \n*GitHubUrl:* $GIT_URL \n*CommitBy:* $GIT_COMMITTER_NAME"
-        }
-    }
         
 }
